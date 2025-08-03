@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+{%load static %}
+<html>
+<head>
+     {% include "gym/header.html" %}
+<style>
+    body {
+    color:  black;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+
+
+<table>
+  <tr>
+    <th> Time for male members</th>
+    <th> Time for female members</th>
+  
+    
+  </tr>
+  <tr>
+    <td> 6AM-8AM</td>
+    <td>  6AM-8AM </td>
+    
+  </tr>
+  <tr>
+    <td> 8AM-10AM</td>
+    <td>8AM-10AM </td>
+    
+  </tr>
+  <tr>
+    <td>10AM-12AM</td>
+    <td> 10AM-12AM</td>
+    
+ 
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="{% static 'gym/style.css' %}">
+   
+</table>
+    <center>
+        <font size="20">
+ <p> Do u want our memership?</p>
+<p><a href="/gym/add_user"> Membership Form</a></p>
+        </font>
+    </center>
+       
+</body>
+</html>

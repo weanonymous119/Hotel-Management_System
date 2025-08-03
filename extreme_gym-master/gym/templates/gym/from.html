@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			.a{
+			padding:50px;
+			padding-left:450px;
+			font-size:20px;
+			width:400px;
+			}
+			.b{
+			padding:5px;
+			background-color:tomato;
+			padding-left:80px;
+			padding-right:80px;
+			}
+			input{
+			padding :10px;
+			margin:5px;
+			border-radius:50px;
+			border:none;
+			}
+		</style>
+	</head>
+<body>
+
+ <form action="/gym/add_user/" method="post">
+{% csrf_token %}
+
+     <div style="text-align:center">
+     {% for i in form %}
+     {{i.label}} {{i}} {{i.errors}}<br>
+     {%endfor%}
+         <input type="submit" value="Submit"></div>
+
+</form>
+	</body>
+</html>

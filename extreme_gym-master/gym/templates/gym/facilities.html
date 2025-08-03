@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Facilities</title>
+    {% include "gym/header.html" %}
+</head>
+<body>
+
+
+<div>
+    <ul>
+
+        <li>
+            <a href="/gym/equipments_show"> <button>Equipments</button></a>
+        </li>
+        <li>
+            <a href="#"> <button>Basic Diet</button></a>
+        </li>
+    </ul>
+    {% if equipments %}
+   <table>
+       <th>Type</th>
+       <th>Name</th>
+       <th>Cardio</th>
+       {% for i in equipments %}
+       <tr>
+           <td>{{i.type}}</td>
+           <td>{{i.name}}</td>
+           <td>{{i.cardio}}</td>
+       </tr>
+        {%endfor%}
+   </table>
+    {%endif%}
+</div>
+
+</body>
+</html>

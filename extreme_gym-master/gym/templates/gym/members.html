@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{%load static %}
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Members</title>
+    {% include "gym/header.html" %}
+</head>
+
+<body>
+
+<ul>
+    <li style="display:inline;list:style:none">
+        <a href="/gym/show_member/female"><button>Female</button></a>
+    </li>
+    <li style="display:inline;list:style:none">
+        <a href="/gym/show_member/male"><button>Male</button></a>
+    </li>
+     <li style="display:inline;list:style:none">
+        <a href="/gym/show_member/instructor"><button>Instructor</button></a>
+    </li>
+</ul>
+<div style="background-image:url('{% static 'gym/images/home_main.jpg' %}');
+width:1000px;height:1000px;background-repeat:no-repeat">
+    <or>
+        {% for member in all_members %}
+
+        <li>{{member.first_name}} {{member.last_name}} {{member.joining_date}}</li>
+        {% endfor %}
+    </or>
+
+</div>
+</body>
+</html>

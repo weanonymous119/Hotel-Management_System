@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+{%load static %}
+<html lang="en">
+<head>
+    {%include "gym/header.html" %}
+  <title>member</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body style="background-image:url({% static 'gym/images/mem.jpg' %});width:100%;height:800px;
+background-repeat:no-repeat">
+
+<div class="container">
+
+  <center>
+      <br> <a href="/gym/show_member/male">  <button type="button" class="btn btn-info"><h1>Male member</h1></button></a><br>
+      <br> <a href ="/gym/show_member/female"><button type="button" class="btn btn-warning"><h1>Female member</h1></button></a> <br>
+      <br> <a href="/gym/show_member/instructor"><button type="button" class="btn btn-danger"><h1>Instructor</h1></button></a>
+    </center>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="member.css">
+</div>
+
+    <center>
+        <font size="20">
+            <font color="orange">
+ <p> Do u want our memership?</p>
+<p><a href="/gym/add_user"> Membership Form</a></p>
+        </font>
+        </font>
+
+    </center>
+<div>
+
+
+    <or style = "color:white">
+        {% for member in all_members %}
+        <li>{{member.first_name}} {{member.last_name}} {{member.joining_date}}</li>
+        {% endfor %}
+    </or>
+</div>
+
+</body>
+</html>
